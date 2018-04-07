@@ -408,7 +408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1441922729902568, guid: 6cfb702513a9b444e840161c05ce93e6, type: 2}
-  TimeTillObjectSpawn: 4.5
+  MinSpawnTime: 1
+  MaxSpawnTime: 3
 --- !u!4 &730863755
 Transform:
   m_ObjectHideFlags: 0
@@ -450,7 +451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1718322845676280, guid: d9f7812ee95d0844c8138831e49342ef, type: 2}
-  TimeTillObjectSpawn: 3
+  MinSpawnTime: 1
+  MaxSpawnTime: 2
 --- !u!4 &1221621014
 Transform:
   m_ObjectHideFlags: 0
@@ -492,7 +494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1554561590292714, guid: 5402405bdadd69145b8743d2ee7aa09d, type: 2}
-  TimeTillObjectSpawn: 5
+  MinSpawnTime: 1
+  MaxSpawnTime: 4
 --- !u!4 &1250670840
 Transform:
   m_ObjectHideFlags: 0

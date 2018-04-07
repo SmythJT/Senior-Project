@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour {
     public GameObject obstacle;
-    public float TimeTillObjectSpawn = 3;
+    public float MinSpawnTime = 3;
+    public float MaxSpawnTime = 3;
     private float CurrentTimer;
 	// Use this for initialization
 	void Start () {
-		CurrentTimer = TimeTillObjectSpawn;
+		CurrentTimer = MaxSpawnTime;
 	}
 	
 	// Update is called once per frame
@@ -16,7 +17,7 @@ public class ObstacleSpawner : MonoBehaviour {
         CurrentTimer -= Time.deltaTime;
         if(CurrentTimer <= 0)
         {
-            CurrentTimer = TimeTillObjectSpawn;
+            CurrentTimer = Random.Range (MinSpawnTime, MaxSpawnTime);
             Instantiate(obstacle, transform);
         }
 	}
