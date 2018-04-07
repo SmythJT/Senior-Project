@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour {
 
+    public Vector2 Knockback = new Vector2(-10, 10);
+    public float Damage = 1;
+    public bool DieOnHit = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -13,8 +17,9 @@ public class DamagePlayer : MonoBehaviour {
     {      
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Health>().Hurt(1);
-            Destroy(this.gameObject);
+            collision.gameObject.GetComponent<Health>().Hurt(Damage);
+            collision.otherRigidbody.AddForce(Knockback);
+            if (DieOnHit) Destroy(this.gameObject);
         }
     }
 
