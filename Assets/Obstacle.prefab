@@ -130,9 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f007f6bfd121e4e892b863ed751eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knockback: {x: -10, y: 10}
-  Damage: 1
-  DieOnHit: 1
 --- !u!212 &212835928384065638
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,7 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Infinite.unity
-    guid: bb87c2e7d538f9d4cab75f6d9c07d6a3
+  m_Scenes: []
