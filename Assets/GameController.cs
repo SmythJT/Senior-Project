@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
             score += Time.deltaTime;
         if(Input.GetKeyDown(KeyCode.R) && gameOver)
             SceneManager.LoadScene("Infinite");
-        ScoreText.text = string.Format("Score: {0:#.##}",score);
+        ScoreText.text = string.Format("Score: {0:#.00}",score);
 	}
     
     public void PlayerDied()
