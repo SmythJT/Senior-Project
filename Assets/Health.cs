@@ -25,7 +25,7 @@ public class Health : MonoBehaviour {
             userControl.SetControl(true);
 		if(CurrentHealth <= 0)
         {
-            Destroy(this.gameObject);
+          this.gameObject.SetActive (false);
         }
 	}
 
