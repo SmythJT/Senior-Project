@@ -18,7 +18,6 @@ public class DamagePlayer : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Health>().Hurt(Damage);
-            collision.otherRigidbody.AddForce(Knockback);
             if (DieOnHit) Destroy(this.gameObject);
         }
     }

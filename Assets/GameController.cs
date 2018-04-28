@@ -7,17 +7,32 @@ public class GameController : MonoBehaviour {
 
 
     public static GameController instance;
-    public Text scoreText { get; set; }
+    public Text ScoreText { get; set; }
     public GameObject gameOverText;
+
+    public bool gameOver = false;
     
     // Use this for initialization
-	void Awake () {
-		
+	void Awake ()
+    {
+		if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
 	}
     
     public void PlayerDied()
+    {
+        gameOverText.SetActive(true);
+        gameOver = true;
+    }
 }

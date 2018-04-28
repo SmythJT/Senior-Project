@@ -21,11 +21,10 @@ public class Health : MonoBehaviour {
 	void Update () {
         if (invincibilityTimer > 0)
             invincibilityTimer -= Time.deltaTime;
-        else
-            userControl.SetControl(true);
 		if(CurrentHealth <= 0)
         {
           this.gameObject.SetActive (false);
+            GameController.instance.PlayerDied();
         }
 	}
 
@@ -33,7 +32,6 @@ public class Health : MonoBehaviour {
     {
         if(invincibilityTimer <= 0)
         {
-            userControl.SetControl(false);
             invincibilityTimer = InvincibilityTime;
             CurrentHealth -= amount;
         }
