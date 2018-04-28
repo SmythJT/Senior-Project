@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
 
     public static GameController instance;
-    public Text ScoreText { get; set; }
+    public Text ScoreText;
     public GameObject gameOverText;
 
+    private float score = 0;
     public bool gameOver = false;
     
     // Use this for initialization
@@ -27,7 +29,11 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (!gameOver)
+            score += Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.R) && gameOver)
+            SceneManager.LoadScene("Infinite");
+        ScoreText.text = string.Format("Score: {0:#.##}",score);
 	}
     
     public void PlayerDied()
